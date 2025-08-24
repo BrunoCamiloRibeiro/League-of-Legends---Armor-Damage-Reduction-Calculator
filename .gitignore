@@ -1,0 +1,9 @@
+# Binários
+*.exe
+
+# Diretório de build
+/Build/
+
+sos.md
+teste.c
+
