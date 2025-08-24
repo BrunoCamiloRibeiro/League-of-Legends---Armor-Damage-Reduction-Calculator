@@ -5,18 +5,14 @@ echo ================================
 echo Compilando o projeto completo...
 echo ================================
 
-:: Define a variável `cfiles` como uma lista vazia
 set "cfiles="
 
-:: Percorre todos os arquivos .c na pasta 'src' e subpastas e adiciona-os à variável
 for /R src %%f in (*.c) do (
     set "cfiles=!cfiles! %%f"
 )
 
-:: Cria a pasta 'Build' se não existir
 if not exist Build mkdir Build
 
-:: Compila todos os .c em src e subpastas
 gcc %cfiles% ^
     -o Build\programa.exe ^
     -IIncludes ^
